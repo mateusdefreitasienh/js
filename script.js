@@ -47,25 +47,32 @@
 // usuario escolhe a operação
 // mostrar resultado
 
-const numA = Number(prompt("Digite o numero A"));
-const numB = Number(prompt("Digite o numero B"));
-const operacao = prompt("Escolha a operação: +, -, *, /");
-
-function calcular (n1, n2, op) {
-    switch (op) {
-        case "+":
-            return n1 + n2;
-        case "-":
-            return n1 - n2;
-        case "*":
-            return n1 * n2;
-        case "/":
-            if (n2 === 0) {
-                return "Inválido! Divisor não pode ser 0";
-            }
-            return n1 / n2;
-    }
+function soma (n1, n2) {
+    return n1 + n2;
 }
 
-const resultado = calcular(numA, numB, operacao);
+function subtrai (n1, n2) {
+    return n1 - n2;
+}
+
+function multiplica (n1, n2) {
+    return n1 * n2;
+}
+
+function divide (n1, n2) {
+    if (n2 === 0){
+        return "Inválido! Divisor não pode ser 0"
+    }
+    return n1 / n2;
+}
+
+const numA = Number(prompt("Digite o numero A"));
+const numB = Number(prompt("Digite o numero B"));
+const operacao = prompt("Escolha a operação: soma, subtrai, multiplica ou divide");
+
+const resultado = operacao === "soma" && soma(numA, numB) ||
+                  operacao === "subtrai" && subtrai(numA, numB) ||
+                  operacao === "multiplica" && multiplica(numA, numB) ||
+                  operacao === "divide" && divide(numA, numB) ||
+                  "Operação inválida";
 alert("Resultado: " + resultado);
