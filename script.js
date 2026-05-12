@@ -1,78 +1,29 @@
-// function somaDivide(numA, numB, numC) {
-//     const resultadoSoma = numA + numB;
-//     const resultadoDivide = resultadoSoma / numC;
+const idades = [19, 22, 15, 30, 18, 25, 17, 20, 21, 16];
+const gostaDeGatosPesquisa = [true, false, true, true, false, true, false, true, false, true];
+const nomes = ["Alice", "Bob", "Charlie", "Diana", "Eve", "Frank", "Grace", "Heidi", "Ivan", "Judy"];
 
-//     return resultadoDivide;
-// }
+// function dobra(n) {
+//     return n * 2;
+// };
 
-// const resultado = somaDivide(7, 3, 2);
-// alert(resultado)
+// const dobra = function(n) {
+//     return n * 2;
+// };
 
-// ================================
+// const dobra = (n) => {
+//     return n * 2;
+// };
 
+// const dobra = n => n * 2;
 
-// criar 4 funcoes, recebendo 2 numeros
-// soma
-// sobtrai
-// multiplica
-// divide
+// const resultado = dobra(idades[0]);
+// console.log(resultado);
 
-// function soma (n1, n2) {
-//     return n1 + n2;
-// }
+// const dobra = n => n * 2;
 
-// function subtrai (n1, n2) {
-//     return n1 - n2;
-// }
+// const dobroIdades = idades.map(dobra);
+// console.log(dobroIdades);
+// // Output:[38, 44, 30, 60, 36, 50, 34, 40, 42, 32]
 
-// function multiplica (n1, n2) {
-//     return n1 * n2;
-// }
-
-// function divide (n1, n2) {
-//     if (n2 === 0){
-//         return "Inválido! Divisor não pode ser 0"
-//     }
-//     return n1 / n2;
-// }
-
-// console.log("Soma: ", soma(1, 3));
-// console.log("Subtração: ", subtrai(1, 3));
-// console.log("Multiplicação: ", multiplica(1, 3));
-// console.log("Divisão: ", divide(10, 2));
-
-// ===========================
-
-// solicitar 2 numeros
-// usuario escolhe a operação
-// mostrar resultado
-
-function soma (n1, n2) {
-    return n1 + n2;
-}
-
-function subtrai (n1, n2) {
-    return n1 - n2;
-}
-
-function multiplica (n1, n2) {
-    return n1 * n2;
-}
-
-function divide (n1, n2) {
-    if (n2 === 0){
-        return "Inválido! Divisor não pode ser 0"
-    }
-    return n1 / n2;
-}
-
-const numA = Number(prompt("Digite o numero A"));
-const numB = Number(prompt("Digite o numero B"));
-const operacao = prompt("Escolha a operação: soma, subtrai, multiplica ou divide");
-
-const resultado = operacao === "soma" && soma(numA, numB) ||
-                  operacao === "subtrai" && subtrai(numA, numB) ||
-                  operacao === "multiplica" && multiplica(numA, numB) ||
-                  operacao === "divide" && divide(numA, numB) ||
-                  "Operação inválida";
-alert("Resultado: " + resultado);
+const dobroIdades = idades.map((n) => n * 2);
+console.log(dobroIdades);
