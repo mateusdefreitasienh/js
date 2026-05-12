@@ -1,57 +1,70 @@
-// const idades = [19, 22, 15, 30, 18, 25, 17, 20, 21, 16];
-// const gostaDeGatosPesquisa = [true, false, true, true, false, true, false, true, false, true];
-// const nomes = ["Alice", "Bob", "Charlie", "Diana", "Eve", "Frank", "Grace", "Heidi", "Ivan", "Judy"];
+// // let btnClique = document.getElementById("btn-clique-me");
+// // // let entradaTexto = document.getElementById("entrada-texto");
+// // btnClique.onclick = function() {
+// // //     alert(entradaTexto.value);
+// // //     console.log(entradaTexto.value);
+// // // };
+// let entrada1 = document.getElementById("entrada-1");
+// let entrada2 = document.getElementById("entrada-2");
 
-// function dobra(n) {
-//     return n * 2;
+// let btnMais = document.getElementById("btn-mais");
+// let btnMenos = document.getElementById("btn-menos");
+// let btnMultiplicacao = document.getElementById("btn-multiplicacao");
+// let btnDivisao = document.getElementById("btn-divisao");
+
+// btnMais.onclick = function() {
+//     let resultado = (Number(entrada1.value) + Number(entrada2.value));
+//     Number(alert(resultado));
+//     Number(console.log(resultado));
 // };
 
-// const dobra = function(n) {
-//     return n * 2;
+// btnMenos.onclick = function() {
+//     let resultado = (Number(entrada1.value) - Number(entrada2.value));
+//     Number(alert(resultado));
+//     Number(console.log(resultado));
 // };
 
-// const dobra = (n) => {
-//     return n * 2;
-// };
+// btnMultiplicacao.onclick = function() {
+//     let resultado = (Number(entrada1.value) * Number(entrada2.value));
+//     Number(alert(resultado));
+//     Number(console.log(resultado));
+// }; 
 
-// const dobra = n => n * 2;
+// btnDivisao.onclick = function() {
+//     let resultado = (Number(entrada1.value) / Number(entrada2.value));
+//     Number(alert(resultado));
+//     Number(console.log(resultado));
+// }
 
-// const resultado = dobra(idades[0]);
-// console.log(resultado);
+// let entradaIdade = document.getElementById("input-idade");
 
-// const dobra = n => n * 2;
+// let btnSubmit = document.getElementById("btn-submit");
 
-// const dobroIdades = idades.map(dobra);
-// console.log(dobroIdades);
-// // Output:[38, 44, 30, 60, 36, 50, 34, 40, 42, 32]
+// btnSubmit.onclick = function() {
+//     let idade = (Number(entradaIdade.value));
+//     let isCrianca = idade > 0 && idade < 12;
+//     let isAdolescente = idade >= 12 && idade < 18;
+//     let isAdulto = idade >= 18 && idade < 60;
+//     let isIdoso = idade >= 60 && idade <= 130;
+//     let isInvalida = idade <= 0 || idade > 130;
 
-// const dobroIdades = idades.map((n) => n * 2);
-// console.log(dobroIdades);
+//     isCrianca && alert("Criança");
+//     isAdolescente && alert("Adolescente");
+//     isAdulto && alert("Adulto");
+//     isIdoso && alert("Idoso");
+//     isInvalida && alert("Idade inválida");
 
+//     entradaIdade.value = "";
+// }
 
-// Exercicio 1
-// Pesquisa de gosta de gatos
-// se true, entao sim
-// se false, entao nao
-const gostaDeGatosPesquisa = [true, false, true, true, false, true, false, true, false, true];
+document.body.style.backgroundColor = "red";
 
-const respostasFormatadas = gostaDeGatosPesquisa.map(resposta => resposta ? "Sim" : "Não");
-console.log(respostasFormatadas);
-
-// Exercicio 2
-// Extrair somente a inicial do nome dos personagens de Breaking Bad
-const breakingBadCharacters = ["Walter White", "Jesse Pinkman", "Skyler White", "Hank Schrader", "Saul Goodman", "Gustavo Fring", "Mike Ehrmantraut", "Tuco Salamanca", "Jane Margolis", "Hector Salamanca"];
-
-const iniciais = breakingBadCharacters.map(nome => nome[0])
-console.log(iniciais);
-
-// Selecionar menores que 20 -> Uso do filter
-const idades = [19, 22, 15, 30, 18, 25, 17, 20, 21, 16];
-
-const menoresVinte = idades.filter(idade => idade <= 20 ? true : false);
-console.log(menoresVinte);
-
-// Somatório das notas -> Uso do reduce
-notas = [3, 7, 9, 10, 3];
-const somaNotas = notas.reduce((acumulador, nota) => acumulador + nota, 0); // acumulador + item do array => regra de acululação (aculumador + nota), valor incial acumulador
-console.log(somaNotas);
+document.body.onclick = function() {
+    let bg = document.body.style.backgroundColor;
+    bg === "red" && (document.body.style.backgroundColor = "blue");
+    bg === "blue" && (document.body.style.backgroundColor = "green");
+    bg === "green" && (document.body.style.backgroundColor = "yellow");
+    bg === "yellow" && (document.body.style.backgroundColor = "purple");
+    bg === "purple" && (document.body.style.backgroundColor = "pink");
+    bg === "pink" && (document.body.style.backgroundColor = "red");
+}
