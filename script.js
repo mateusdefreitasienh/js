@@ -1,57 +1,90 @@
-// const idades = [19, 22, 15, 30, 18, 25, 17, 20, 21, 16];
-// const gostaDeGatosPesquisa = [true, false, true, true, false, true, false, true, false, true];
-// const nomes = ["Alice", "Bob", "Charlie", "Diana", "Eve", "Frank", "Grace", "Heidi", "Ivan", "Judy"];
+const pessoas = [{
+    nome: "Mateus",
+    sobrenome: "Freitas",
+    idade: 27,
+    mostarIdade() {
+        alert(this.nome + " " + this.sobrenome)
+    },
+},
+{
+    nome: "Joao",
+    sobrenome: "Carlos",
+    idade: 27,
+    mostarIdade() {
+        alert(this.nome + " " + this.sobrenome)
+    },
+}];
 
-// function dobra(n) {
-//     return n * 2;
-// };
+const mateus = {
+    nome: "Mateus",
+    sobrenome: "Freitas",
+    idade: 27,
+}
 
-// const dobra = function(n) {
-//     return n * 2;
-// };
+// acesso ao objeto
+// alert(pessoas[0].nome)
 
-// const dobra = (n) => {
-//     return n * 2;
-// };
+// desestruturação  
+const { nome, sobrenome } = mateus;
+// O codigo acima é a mesma coisa que
+// const nome = mateus.nome
+// const nome = mateus.sobrenome
 
-// const dobra = n => n * 2;
+function mostraNomeCompleto(nome, sobrenome) {
+    alert(nome + " " + sobrenome)
+};
 
-// const resultado = dobra(idades[0]);
-// console.log(resultado);
-
-// const dobra = n => n * 2;
-
-// const dobroIdades = idades.map(dobra);
-// console.log(dobroIdades);
-// // Output:[38, 44, 30, 60, 36, 50, 34, 40, 42, 32]
-
-// const dobroIdades = idades.map((n) => n * 2);
-// console.log(dobroIdades);
+mostraNomeCompleto(nome, sobrenome);
 
 
-// Exercicio 1
-// Pesquisa de gosta de gatos
-// se true, entao sim
-// se false, entao nao
-const gostaDeGatosPesquisa = [true, false, true, true, false, true, false, true, false, true];
+/// operador de resto ... -> pega aquilo que sobrou
 
-const respostasFormatadas = gostaDeGatosPesquisa.map(resposta => resposta ? "Sim" : "Não");
-console.log(respostasFormatadas);
+cores = ["vermelho", "azul", "verde", "preto", "laranja"];
+const [primeiraCor, segundaCor, ...coresRestantes] = cores;
 
-// Exercicio 2
-// Extrair somente a inicial do nome dos personagens de Breaking Bad
-const breakingBadCharacters = ["Walter White", "Jesse Pinkman", "Skyler White", "Hank Schrader", "Saul Goodman", "Gustavo Fring", "Mike Ehrmantraut", "Tuco Salamanca", "Jane Margolis", "Hector Salamanca"];
+alert(primeiraCor)
+alert(coresRestantes)
 
-const iniciais = breakingBadCharacters.map(nome => nome[0])
-console.log(iniciais);
+const pessoaSecreta = {
+    nome: 'Joao',
+    sobrenome: 'Pedro',
+    idade: 20,
+    profissao: 'Desenvolvedor',
+    genero: 'Masculino',
+    bandaFavorita: 'Slipknot',
+    filmeFavorito: 'Ilha do Medo'
+}
 
-// Selecionar menores que 20 -> Uso do filter
-const idades = [19, 22, 15, 30, 18, 25, 17, 20, 21, 16];
+const { artistaFavorito, filmeFavorito, ...infosRestantes } = pessoaSecreta;
 
-const menoresVinte = idades.filter(idade => idade <= 20 ? true : false);
-console.log(menoresVinte);
+console.log(infosRestantes)
 
-// Somatório das notas -> Uso do reduce
-notas = [3, 7, 9, 10, 3];
-const somaNotas = notas.reduce((acumulador, nota) => acumulador + nota, 0); // acumulador + item do array => regra de acululação (aculumador + nota), valor incial acumulador
-console.log(somaNotas);
+const numerosA = [6, 7, 8]
+const numerosB = [4, 2, 1] 
+
+const todosOsNumeros = [...numerosA, ...numerosB]; //todos os numeros
+
+alert(todosOsNumeros)
+
+const pessoaBase = {
+    nome: 'Goku',
+    sobrenome: 'Vegeta'
+}
+
+const pessoaExtra = {
+    signo: 'Dragao',
+    idade: null
+}
+
+const pessoaCompleta = {...pessoaBase, ...pessoaExtra};
+
+
+// criar vetor de objetos ( prop )
+
+// usar desestruturacao de 
+//     - vetor
+//      - objeto
+
+// usar operador de resto
+    // - pegar info restante (obj, vetor)
+    // - construir algo novo (obj, vetor)
