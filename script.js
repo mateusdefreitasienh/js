@@ -232,3 +232,7 @@ const pessoasLi = pessoas.map(({nome, sobrenome, idade}) => {
 });
 
 ul.append(...pessoasLi)
+
+// inserir o vetor de objetos (carros) no HTML
+// inserir uma UL > LI
+// Inserir funcao de clic
